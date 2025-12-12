@@ -41,6 +41,14 @@ public class Car {
         return this.seats;
     }
 
+    public Seat getSeatById(int id) {
+        Seat seat = this.seats.stream()
+            .filter(s -> s.getId() == id)
+            .findFirst()
+            .orElse(null);
+        return seat;
+    }
+
     private Seat createSeats(int id) {
         if (id < 1 || id > 10) {
             return null;
