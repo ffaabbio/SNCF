@@ -37,6 +37,10 @@ public class Car {
         return numSiege;
     }
 
+    public List<Seat> getSeats() {
+        return this.seats;
+    }
+
     private Seat createSeats(int id) {
         if (id < 1 || id > 10) {
             return null;
