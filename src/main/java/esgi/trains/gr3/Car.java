@@ -1,5 +1,9 @@
-<<<<<<< HEAD
 package esgi.trains.gr3;
+
+
+import esgi.trains.gr3.CarClass;
+import esgi.trains.gr3.Seat;
+import esgi.trains.gr3.SeatType;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -61,6 +65,7 @@ public class Car {
         );
     }
 
+<<<<<<< HEAD
     public Seat search(SearchSeatCriteria criteria){
         List<Seat> availableSeats = this.seats.stream().filter(seat -> criteria.match(seat)).toList();
         if(availableSeats.isEmpty()){
@@ -68,38 +73,6 @@ public class Car {
         }
         return availableSeats.getFirst();
     }
-}
 =======
-package esgi.trains.gr3;
-
-import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-
-public class Car {
-    private CarClass carClass;
-    private int numCar;
-    private int numSiege;
-
-    public Car(CarClass carClass, int numCar, int numSiege){
-        this.carClass = carClass;
-        this.numCar = numCar;
-        this.numSiege = numSiege;
-    }
-
-    public CarClass getCarClass() {
-        return carClass;
-    }
-
-    public int getNumCar() {
-        return numCar;
-    }
-
-    public int getNumSiege() {
-        return numSiege;
-    }
-
-
-
+>>>>>>> 8df85b1 (Try to create search in Train class)
 }
->>>>>>> b45e6d3 (JSP)
