@@ -16,7 +16,7 @@ public class SeatTest
         Seat seat = new Seat(1, SeatType.Window, Status.Free);
 
 
-        assertTrue(seat.isAvaible(), "Le siège doit être disponible au départ");
+        assertTrue(seat.isAvaible(), "Le siege doit etre disponible");
 
 
         assertEquals(1, seat.getId());
@@ -27,7 +27,7 @@ public class SeatTest
         seat.book();
 
 
-        assertFalse(seat.isAvaible(), "Le siège ne doit plus être disponible après réservation");
+        assertFalse(seat.isAvaible(), "Le siege n'est pas disponnible");
 
 
         assertEquals(Status.Booked, seat.getStatus());
@@ -37,3 +37,4 @@ public class SeatTest
 
 
 }
+
