@@ -26,7 +26,10 @@ public class Train {
             .orElse(false);
     }
 
-    public Ticket search(CarClass carClass, SearchSeatCriteria searchSeatCriteriaCriteria){
-        searchSeatCriteriaCriteria.match(cars.getClass())
-    }
+    // public Ticket search(
+    //     CarClass carClass,
+    //     SearchSeatCriteria searchSeatCriteria
+    // ) {
+    //     List<Seat> avaibleSeats = this.cars.stream().filter(car -> searchSeatCriteria.match(car)).;
+    // }
 }

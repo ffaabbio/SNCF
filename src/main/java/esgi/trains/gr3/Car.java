@@ -1,10 +1,5 @@
 package esgi.trains.gr3;
 
-
-import esgi.trains.gr3.CarClass;
-import esgi.trains.gr3.Seat;
-import esgi.trains.gr3.SeatType;
-
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -65,14 +60,13 @@ public class Car {
         );
     }
 
-<<<<<<< HEAD
-    public Seat search(SearchSeatCriteria criteria){
-        List<Seat> availableSeats = this.seats.stream().filter(seat -> criteria.match(seat)).toList();
-        if(availableSeats.isEmpty()){
+    public Seat search(SearchSeatCriteria criteria) {
+        List<Seat> availableSeats = this.seats.stream()
+            .filter(seat -> criteria.match(seat))
+            .toList();
+        if (availableSeats.isEmpty()) {
             throw new IllegalArgumentException("No such seat");
         }
         return availableSeats.getFirst();
     }
-=======
->>>>>>> 8df85b1 (Try to create search in Train class)
 }
