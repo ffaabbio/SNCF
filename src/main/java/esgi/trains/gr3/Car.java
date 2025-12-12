@@ -1,5 +1,7 @@
 package esgi.trains.gr3;
 
+import java.util.List;
+
 public class Car {
     private CarClass carClass;
     private int numCar;
@@ -22,6 +24,11 @@ public class Car {
     public int getNumSiege() {
         return numSiege;
     }
+
+    /*public Seat search(SearchSeatCriteria criteria){
+        this.seats.stream().filter(criteria - > criteria.match());
+
+    }*/
 
 
 }
