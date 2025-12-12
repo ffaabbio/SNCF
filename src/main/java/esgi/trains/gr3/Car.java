@@ -59,4 +59,12 @@ public class Car {
             Status.Free
         );
     }
+
+    public Seat search(SearchSeatCriteria criteria){
+        List<Seat> availableSeats = this.seats.stream().filter(seat -> criteria.match(seat)).toList();
+        if(availableSeats.isEmpty()){
+            throw new IllegalArgumentException("No such seat");
+        }
+        return availableSeats.getFirst();
+    }
 }
