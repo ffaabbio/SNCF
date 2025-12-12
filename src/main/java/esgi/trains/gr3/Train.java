@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Train {
+
     private List<Car> cars;
 
-    public Train () {
+    public Train() {
         this.cars = new ArrayList<Car>();
     }
 
-    public Boolean attach(Car car){
-        if(this.cars.size() < 4 && !this.cars.contains(car)){
+    public Boolean attach(Car car) {
+        if (this.cars.size() < 4 && !this.cars.contains(car)) {
             return this.cars.add(car);
         }
         return false;
-
     }
 }

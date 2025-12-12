@@ -41,12 +41,12 @@ public class Car {
         return this.seats;
     }
 
-    public Seat getSeatById(int id) {
-        Seat seat = this.seats.stream()
+    public boolean bookSeatById(int id) {
+        return this.seats.stream()
             .filter(s -> s.getId() == id)
             .findFirst()
-            .orElse(null);
-        return seat;
+            .map(Seat::book)
+            .orElse(false);
     }
 
     private Seat createSeats(int id) {

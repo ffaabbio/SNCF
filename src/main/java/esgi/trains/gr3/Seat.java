@@ -16,8 +16,9 @@ public class Seat {
         return this.status == Status.Free;
     }
 
-    public void book() {
+    public boolean book() {
         this.status = Status.Booked;
+        return true;
     }
 
     public int getId() {
