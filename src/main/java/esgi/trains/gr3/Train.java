@@ -26,5 +26,7 @@ public class Train {
             .orElse(false);
     }
 
-
+    public Ticket search(CarClass carClass, SearchSeatCriteria searchSeatCriteriaCriteria){
+        searchSeatCriteriaCriteria.match(cars.getClass())
+    }
 }
