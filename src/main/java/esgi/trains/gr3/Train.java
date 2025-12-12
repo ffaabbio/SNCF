@@ -11,7 +11,10 @@ public class Train {
     }
 
     public Boolean attach(Car car){
-        this.cars.add(car);
-        return true;
+        if(this.cars.size() < 4 && !this.cars.contains(car)){
+            return this.cars.add(car);
+        }
+        return false;
+
     }
 }
