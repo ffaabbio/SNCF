@@ -17,4 +17,12 @@ public class Train {
         }
         return false;
     }
+
+    public void book(Ticket ticket) {
+        this.cars.stream()
+            .filter(c -> c.getNumCar() == ticket.CarId())
+            .findFirst()
+            .map(c -> c.bookSeatById(ticket.SeatId()))
+            .orElse(false);
+    }
 }
